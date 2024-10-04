@@ -1,18 +1,28 @@
-<script lang="ts">
-    import { Alert } from 'flowbite-svelte';
+<script>
+  let name = "Markus"; // Replace with your name or make dynamic if needed
 </script>
 
-<style>
-  /* Optional: Custom styles if needed */
-</style>
+<section class="welcome-section">
+  <h1>Welcome to my Portfolio!</h1>
+  <p>Hi, I'm {name}. I'm excited to showcase my projects and skills with you. Take a look around and feel free to reach out!</p>
+</section>
 
-<div class="flex justify-center items-center min-h-screen bg-gray-100">
-  <div class="max-w-md w-full">
-    <Alert
-      class="p-4 mb-4 text-sm text-blue-700 bg-blue-100 rounded-lg shadow-md"
-      role="alert"
-    >
-      <span class="font-medium">Welcome, User!</span> We're excited to have you here. Explore and enjoy our platform!
-    </Alert>
-  </div>
-</div>
+<style>
+  .welcome-section {
+    text-align: center;
+    padding: 2rem;
+    background-color: #f0f4f8;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  }
+
+  h1 {
+    font-size: 2.5rem;
+    color: #333;
+  }
+
+  p {
+    font-size: 1.2rem;
+    color: #666;
+  }
+</style>
