@@ -21,6 +21,7 @@
     background-color: black; /* Set the background color to black */
     color: white; /* Set default text color to white */
     height: 100vh; /* Make sure it covers full height */
+    overflow: hidden; /* Prevent scrolling */
   }
 
   /* Navbar styles */
@@ -74,12 +75,13 @@
   .about-section {
     text-align: center;
     background-color: black; /* Ensure about section has black background */
-    padding: 16.2rem; /* Add padding for spacing */
+    padding: 11.5rem; /* Add padding for spacing */
+    overflow: hidden; /* Ensure no scrolling */
   }
 
   h1 {
     font-size: 2.5rem;
-    color: white; /* Heading color */
+    color: #ff6347; /* Heading color */
   }
 
   p {
@@ -170,9 +172,7 @@
 <section class="about-section">
   <h1>About Me</h1>
   <br>
-  <p>Hi, I'm {name}. I'm a passionate web developer with skills in Angular, JavaScript, and IoT.</p>
-  <p>I enjoy creating dynamic and responsive web applications that provide a great user experience.</p>
-  <p>Feel free to check out my <a href="/portfolio" style="color: #ff6347;">portfolio</a> to see some of my work!</p>
+  <p>My name is Markus Eugene B. Alop. My classmates call me "{name}", and my close friends call me "Lop". I love cars, but I’m not really knowledgeable about them. The most social media I use is TikTok, where I mostly watch content about cars. I also love working out, but I’m currently not going to the gym due to a busy schedule in school. As an IT student, I often feel lazy about coding, but this particular subject has sparked my interest, and I genuinely love it. It gives me the motivation to code and engage in programming</p>
 </section>
 
 <!-- Footer -->

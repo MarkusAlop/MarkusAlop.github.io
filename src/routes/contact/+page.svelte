@@ -21,6 +21,7 @@
     background-color: black; /* Set the background color to black */
     color: white; /* Set default text color to white */
     height: 100vh; /* Make sure it covers full height */
+    overflow: hidden; /* Prevent scrolling */
   }
 
   /* Navbar styles */
@@ -74,12 +75,13 @@
   .contact-section {
     text-align: center;
     background-color: black; /* Ensure contact section has black background */
-    padding: 16.2rem; /* Add padding for spacing */
+    padding: 10.6rem; /* Add padding for spacing */
+    overflow: hidden; /* Prevent scrolling */
   }
 
   h1 {
     font-size: 2.5rem;
-    color: white; /* Heading color */
+    color: #ff6347; /* Heading color */
   }
 
   p {
@@ -171,9 +173,11 @@
   <h1>Contact Me</h1>
   <br>
   <p>Hi, I'm {name}. I'd love to hear from you! Feel free to reach out through any of the channels below.</p>
-  <p>Email: <a href="mailto:your-email@example.com" style="color: #ff6347;">your-email@example.com</a></p>
-  <p>LinkedIn: <a href="https://www.linkedin.com/in/yourprofile" target="_blank" style="color: #ff6347;">Your LinkedIn Profile</a></p>
-  <p>GitHub: <a href="https://github.com/yourprofile" target="_blank" style="color: #ff6347;">Your GitHub Profile</a></p>
+  <p>School Email: <a href="mailto:202210155@gordoncollege.edu.ph" style="color: #ff6347;">202210155@gordoncollege.edu.ph</a></p>
+  <p>Personal Email: <a href="mailto:eugenemarkusalop@gmail.com" style="color: #ff6347;">eugenemarkusalop@gmail.com</a></p>
+  <p>GitHub: <a href="https://github.com/MarkusAlop" target="_blank" style="color: #ff6347;">MarkusAlop</a></p>
+  <p>Facebook: <a href="https://www.facebook.com/MEBautistaA/" target="_blank" style="color: #ff6347;">Markus Eugene Alop</a></p>
+  <p>Instagram: <a href="https://www.instagram.com/_mrkslp" style="color: #ff6347;">_mrkslp</a></p>
 </section>
 
 <!-- Footer -->

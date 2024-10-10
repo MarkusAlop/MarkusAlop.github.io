@@ -8,19 +8,23 @@
   onMount(() => {
     currentPage = window.location.pathname === '/' ? 'home' : window.location.pathname.substring(1);
   });
+
+  function showMessage() {
+    alert("202210155@gordoncollege.edu.ph or eugenemarkusalop@gmail.com");
+  }
 </script>
 
 <style>
   /* Overall body style for alignment */
-  body {
+  html, body {
+    height: 100%; /* Ensure both html and body cover full height */
+    margin: 0; /* Remove default margin */
+    background-color: black; /* Set the entire background color to black */
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin: 0; /* Remove default margin */
-    font-family: Arial, sans-serif; /* Added a default font */
-    background-color: black; /* Set the background color to black */
-    height: 100vh; /* Make sure it covers full height */
-    justify-content: space-between; /* Space out content */
+    justify-content: space-between;
+    font-family: Arial, sans-serif; /* Default font */
     overflow: hidden; /* Prevent scrolling */
   }
 
@@ -74,12 +78,17 @@
   .welcome-section {
     text-align: center;
     background-color: black; /* Ensure welcome section has black background */
-    padding: 16.2rem; /* Add padding for spacing */
+    padding: 8rem 1rem; /* Reduce padding for better fit */
+    box-sizing: border-box; /* Ensure padding is accounted for in the element's total width/height */
+    max-height: 100vh; /* Limit to viewport height */
+    overflow: hidden; /* Ensure no scrolling */
   }
 
   h1 {
     font-size: 2.5rem;
     color: white; /* Heading color */
+    margin: 0; /* Remove default margin */
+    padding-top: 1rem; /* Optional: Adjust top padding */
   }
 
   p {
@@ -92,10 +101,24 @@
     color: blue; /* Set paragraph color to blue */
   }
 
+  /* Icon styles */
+  .icon-container {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem; /* Space between icons */
+    margin-top: 2rem; /* Space between icons and the h1 */
+  }
+
+  .icon-container svg {
+    width: 2rem;
+    height: 2rem;
+    fill: white; /* Set icon color to white */
+  }
+
   /* Footer styles */
   .footer {
     text-align: center; /* Center text in footer */
-    padding: 1rem 0; /* Add padding */
+    padding: 2.5rem 0; /* Add padding */
     background-color: black; /* Set footer background color */
     color: white; /* Set footer text color */
     font-size: 1rem; /* Set footer font size */
@@ -176,14 +199,40 @@
 </div>
 
 <!-- Welcome Section -->
-<section class="welcome-section {currentPage === 'portfolio' ? 'portfolio-page' : ''}">
-  <h1>Hello! 👋🏼</h1>
-  <h1>I'm Markus Alop</h1>
-  <h1>A Student 🧑🏽‍💻 in Gordon College</h1>
-</section>
+<div class="welcome-section {currentPage === 'portfolio' ? 'portfolio-page' : ''}">
+  <h1>Hi! 👋🏼</h1>
+  <h1>I'm {name} Alop</h1>
+  <h1>An IT Student in Gordon College!</h1>
 
-<!-- Footer Section -->
-<footer class="footer">
-  Created by Markus Alop with Svelte ✨
-</footer>
+  <!-- Icon Section -->
+  <div class="icon-container">
+    <!-- Replace these SVGs with the logos you want to add -->
+    <button on:click={showMessage} class="bg-transparent border-none cursor-pointer">
+      <svg class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 24 24">
+        <path d="M2.038 5.61A2.01 2.01 0 0 0 2 6v12a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V6c0-.12-.01-.238-.03-.352l-.866.65-7.89 6.032a2 2 0 0 1-2.429 0L2.884 6.288l-.846-.677Z"/>
+        <path d="M20.677 4.117A1.996 1.996 0 0 0 20 4H4c-.225 0-.44.037-.642.105l.758.607L12 10.742 19.9 4.7l.777-.583Z"/>
+      </svg>      
+    </button>
+    <a href="https://github.com/MarkusAlop" target="_blank">
+    <svg class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 24 24">
+      <path fill-rule="evenodd" d="M12.006 2a9.847 9.847 0 0 0-6.484 2.44 10.32 10.32 0 0 0-3.393 6.17 10.48 10.48 0 0 0 1.317 6.955 10.045 10.045 0 0 0 5.4 4.418c.504.095.683-.223.683-.494 0-.245-.01-1.052-.014-1.908-2.78.62-3.366-1.21-3.366-1.21a2.711 2.711 0 0 0-1.11-1.5c-.907-.637.07-.621.07-.621.317.044.62.163.885.346.266.183.487.426.647.71.135.253.318.476.538.655a2.079 2.079 0 0 0 2.37.196c.045-.52.27-1.006.635-1.37-2.219-.259-4.554-1.138-4.554-5.07a4.022 4.022 0 0 1 1.031-2.75 3.77 3.77 0 0 1 .096-2.713s.839-.275 2.749 1.05a9.26 9.26 0 0 1 5.004 0c1.906-1.325 2.74-1.05 2.74-1.05.37.858.406 1.828.101 2.713a4.017 4.017 0 0 1 1.029 2.75c0 3.939-2.339 4.805-4.564 5.058a2.471 2.471 0 0 1 .679 1.897c0 1.372-.012 2.477-.012 2.814 0 .272.18.592.687.492a10.05 10.05 0 0 0 5.388-4.421 10.473 10.473 0 0 0 1.313-6.948 10.32 10.32 0 0 0-3.39-6.165A9.847 9.847 0 0 0 12.007 2Z" clip-rule="evenodd"/>
+    </svg>
+    </a>
+    <a href="https://www.facebook.com/MEBautistaA" target="_blank">    
+    <svg class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 24 24">
+      <path fill-rule="evenodd" d="M13.135 6H15V3h-1.865a4.147 4.147 0 0 0-4.142 4.142V9H7v3h2v9.938h3V12h2.021l.592-3H12V6.591A.6.6 0 0 1 12.592 6h.543Z" clip-rule="evenodd"/>
+    </svg>  
+    </a>
+    <a href="https://www.instagram.com/_mrkslp" target="_blank"> 
+    <svg class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
+      <path fill="white" fill-rule="evenodd" d="M3 8a5 5 0 0 1 5-5h8a5 5 0 0 1 5 5v8a5 5 0 0 1-5 5H8a5 5 0 0 1-5-5V8Zm5-3a3 3 0 0 0-3 3v8a3 3 0 0 0 3 3h8a3 3 0 0 0 3-3V8a3 3 0 0 0-3-3H8Zm7.597 2.214a1 1 0 0 1 1-1h.01a1 1 0 1 1 0 2h-.01a1 1 0 0 1-1-1ZM12 9a3 3 0 1 0 0 6 3 3 0 0 0 0-6Zm-5 3a5 5 0 1 1 10 0 5 5 0 0 1-10 0Z" clip-rule="evenodd"/>
+    </svg>
+    </a>
+  </div>
+</div>
+
+<!-- Footer -->
+<div class="footer">
+  Created by Markus with Svelte ✨
+</div>
 </div>
