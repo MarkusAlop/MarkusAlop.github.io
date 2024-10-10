@@ -177,7 +177,7 @@
   <p>Personal Email: <a href="mailto:eugenemarkusalop@gmail.com" style="color: #ff6347;">eugenemarkusalop@gmail.com</a></p>
   <p>GitHub: <a href="https://github.com/MarkusAlop" target="_blank" style="color: #ff6347;">MarkusAlop</a></p>
   <p>Facebook: <a href="https://www.facebook.com/MEBautistaA/" target="_blank" style="color: #ff6347;">Markus Eugene Alop</a></p>
-  <p>Instagram: <a href="https://www.instagram.com/_mrkslp" style="color: #ff6347;">_mrkslp</a></p>
+  <p>Instagram: <a href="https://www.instagram.com/_mrkslp" target="_blank" style="color: #ff6347;">_mrkslp</a></p>
 </section>
 
 <!-- Footer -->
