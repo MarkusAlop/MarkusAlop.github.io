@@ -9,7 +9,7 @@ export default {
 	theme: {
 		extend: {
 			fontFamily: {
-				sans: ["Lato", ...defaultTheme.fontFamily.sans],
+				sans: ['Space Grotesk', ...defaultTheme.fontFamily.sans],
 			},
 colors: {
 				// flowbite-svelte
